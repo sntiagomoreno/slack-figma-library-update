@@ -46,7 +46,7 @@ app.listen(port, () => {
 });
 
 app.get("/", (res: Response) => {
-  res.json({ status: 200 });
+  res.status(200).json({ message: "success" });
 });
 
 app.post("/", (req: Request, res: Response) => {
