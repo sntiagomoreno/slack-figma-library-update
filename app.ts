@@ -1,8 +1,7 @@
 import express, { Request, Response, NextFunction } from "express";
 import bodyParser from "body-parser";
-import dotenv from "dotenv";
+import * as dotenv from "dotenv";
 import axios from "axios";
-import { env } from "process";
 import Blocks from "./blocks";
 
 dotenv.config();
