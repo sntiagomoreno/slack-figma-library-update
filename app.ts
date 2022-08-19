@@ -45,20 +45,13 @@ app.listen(port, () => {
   console.log(`Timezones by location application is running on port ${port}.`);
 });
 
-app.get("/", (res: Response) => {
+app.get("/", (req: Request, res: Response) => {
   res.status(200).json({ message: "success" });
 });
 
 app.post("/", (req: Request, res: Response) => {
   const { body } = req;
   const { passcode, file_name } = body;
-  console.log(
-    JSON.stringify(
-      Blocks(body as PublishedLibraryPayload).blocks.filter(
-        (element) => Object.keys(element).length !== 0
-      )
-    )
-  );
 
   if (passcode === process.env.PASSCODE && file_name !== "Utilities") {
     const data = Blocks(body as PublishedLibraryPayload);
