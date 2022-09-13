@@ -53,13 +53,13 @@ app.post("/", (req: Request, res: Response) => {
   const { body } = req;
   const { passcode, file_name } = body;
 
-  if (passcode === process.env.PASSCODE && file_name !== "Utilities") {
+  if (passcode === process.env.PASSCODE && file_name !== "System | Utilities") {
     const data = Blocks(body as PublishedLibraryPayload);
     const cleanedUpBlocks = data.blocks.filter(
       (element) => Object.keys(element).length !== 0
     );
     data.blocks = cleanedUpBlocks;
-    axios.post(process.env.SLACK_URL, data).catch((err) => console.log(err));
     res.status(200).json({ message: "success" });
+    axios.post(process.env.SLACK_URL, data).catch((err) => console.log(err));
   }
 });
