@@ -78,12 +78,12 @@ const Blocks = (content: PublishedLibraryPayload): SlackBlocks => {
           },
         }),
       },
-      {
-        ...(created_components.length && {
-          type: "section",
-          fields: getFields(created_components),
-        }),
-      },
+      // {
+      //   ...(created_components.length && {
+      //     type: "section",
+      //     fields: getFields(created_components),
+      //   }),
+      // },
       // Modified components
       {
         ...(modified_components.length && {
@@ -94,12 +94,12 @@ const Blocks = (content: PublishedLibraryPayload): SlackBlocks => {
           },
         }),
       },
-      {
-        ...(modified_components.length && {
-          type: "section",
-          fields: getFields(modified_components),
-        }),
-      },
+      // {
+      //   ...(modified_components.length && {
+      //     type: "section",
+      //     fields: getFields(modified_components),
+      //   }),
+      // },
       // Modified styles
       {
         ...(created_styles.length && {
@@ -110,12 +110,12 @@ const Blocks = (content: PublishedLibraryPayload): SlackBlocks => {
           },
         }),
       },
-      {
-        ...(created_styles.length && {
-          type: "section",
-          fields: getFields(created_styles),
-        }),
-      },
+      // {
+      //   ...(created_styles.length && {
+      //     type: "section",
+      //     fields: getFields(created_styles),
+      //   }),
+      // },
       // Modified styles
       {
         ...(modified_styles.length && {
@@ -126,12 +126,12 @@ const Blocks = (content: PublishedLibraryPayload): SlackBlocks => {
           },
         }),
       },
-      {
-        ...(modified_styles.length && {
-          type: "section",
-          fields: getFields(modified_styles),
-        }),
-      },
+      // {
+      //   ...(modified_styles.length && {
+      //     type: "section",
+      //     fields: getFields(modified_styles),
+      //   }),
+      // },
       // Deleted components
       {
         ...(deleted_components.length && {
@@ -142,12 +142,12 @@ const Blocks = (content: PublishedLibraryPayload): SlackBlocks => {
           },
         }),
       },
-      {
-        ...(deleted_components.length && {
-          type: "section",
-          fields: getFields(deleted_components),
-        }),
-      },
+      // {
+      //   ...(deleted_components.length && {
+      //     type: "section",
+      //     fields: getFields(deleted_components),
+      //   }),
+      // },
       // Deleted styles
       {
         ...(deleted_styles.length && {
@@ -158,12 +158,12 @@ const Blocks = (content: PublishedLibraryPayload): SlackBlocks => {
           },
         }),
       },
-      {
-        ...(deleted_styles.length && {
-          type: "section",
-          fields: getFields(deleted_styles),
-        }),
-      },
+      // {
+      //   ...(deleted_styles.length && {
+      //     type: "section",
+      //     fields: getFields(deleted_styles),
+      //   }),
+      // },
       {
         type: "context",
         elements: [
